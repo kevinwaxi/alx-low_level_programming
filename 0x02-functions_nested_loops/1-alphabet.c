@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * main - check code
+ * main - void print alphabets
  *
- * Description: print_alphabet - utilizes on the _putchar function to 
- * 		print the alphabet
+ * print_alphabet - check the code for ALX School students.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 
 void print_alphabet(void)
