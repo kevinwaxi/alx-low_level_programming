@@ -33,9 +33,10 @@ General
    * A README.md file, at the root of the folder of this project (i.e. 0x03-debugging), describing what this project is about
 
 ### Tasks
-# 0. Multiple mains 
+
+#### 0. Multiple mains 
 In most projects, we often give you only one main file to test with. For example, this main file is a test for a postitive_or_negative() function similar to the one you worked with in an earlier C project:
-```PHP
+```C
 #include "main.h"
 
 /**
@@ -54,8 +55,37 @@ int main(void)
 }
 ```
 Based on the main.c file above, create a file named 0-main.c. This file must test that the function positive_or_negative() gives the correct output when given a case of 0. </br>
-You are not coding the solution / function, you’re just testing it! However, you can adapt your function from 0x01. C - Variables, if, else, while - Task #0 to compile with this main file to test locally.
+You are not coding the solution / function, you’re just testing it! However, you can adapt your function from 0x01. C - Variables, if, else, while - Task 0 to compile with this main file to test locally.
   *  You only need to upload 0-main.c and main.h for this task. We will provide our own positive_or_negative() function.
   *  You are not allowed to add or remove lines of code, you may change only one line in this task.
 
+#### 1. Like, comment, subscribe 
+Copy this main file. Comment out (don’t delete it!) the part of the code that is causing the output to go into an infinite loop.
+  *  Don’t add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
+  *  You do not have to compile with -Wall -Werror -Wextra -pedantic for this task.
+```C
+#include <stdio.h>
 
+/**
+* main - causes an infinite loop
+* Return: 0
+*/
+
+int main(void)
+{
+        int i;
+
+        printf("Infinite loop incoming :(\n");
+
+        i = 0;
+
+        while (i < 10)
+        {
+                putchar(i);
+        }
+
+        printf("Infinite loop avoided! \\o/\n");
+
+        return (0);
+}
+```
