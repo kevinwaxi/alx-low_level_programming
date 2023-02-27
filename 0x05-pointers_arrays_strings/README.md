@@ -26,7 +26,9 @@ Write a function that takes a pointer to an int as parameter and updates the val
 
    * Prototype: `void reset_to_98(int *n);`
 </p>
+  
 ```bash
+  
 julien@ubuntu:~/0x05$ cat 0-main.c
 #include "main.h"
 #include <stdio.h>
