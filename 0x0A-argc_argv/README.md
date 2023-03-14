@@ -43,6 +43,28 @@ Repo:
    * Directory: 0x0A-argc_argv
    * File: 1-args.c
 
+##  2. The best argument against democracy is a five-minute conversation with the average voter 
+Write a program that prints all arguments it receives.
+   * All arguments should be printed, including the first one
+   * Only print one argument per line, ending with a new line
+
+```bash
+julien@ubuntu:~/0x0A. argc, argv$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-args.c -o args
+julien@ubuntu:~/0x0A. argc, argv$ ./args 
+./args
+julien@ubuntu:~/0x0A. argc, argv$ ./args You can do anything, but not everything.
+./args
+You
+can
+do
+anything,
+but
+not
+everything.
+julien@ubuntu:~/0x0A. argc, argv$ 
+```
+
+
 ##  3. Neither irony nor sarcasm is argument 
 Write a program that multiplies two numbers.
    * Your program should print the result of the multiplication, followed by a new line
