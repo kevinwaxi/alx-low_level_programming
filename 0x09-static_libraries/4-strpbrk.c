@@ -1,26 +1,18 @@
 #include "main.h"
-
 /**
- * _strpbrk - Searches a string for any of a set of bytes.
- * @s: The string to be searched.
- * @accept: The set of bytes to be searched for.
- *
- * Return: If a set is matched - a pointer to the matched byte.
- * If no set is matched - NULL.
+ * _isalpha - checks for alphabetic character
+ * @c: character checked
+ * Return: 1 if a letter,lowercase,uppercase and 0 otherwise
  */
-char *_strpbrk(char *s, char *accept)
+int _isalpha(int c)
 {
-	int i;
+        if ((c >= 97 && c <= 122) || (c >= 65 && c <= 92))
+        {
+                return (1);
+        }
+        else
+        {
+                return (0);
+        }
 
-	while (*s)
-	{
-		for (i = 0; accept[i]; i++)
-		{
-			if (*s == accept[i])
-				return (s);
-		}
-
-		s++;
-	}
-	return ('\0');
 }
