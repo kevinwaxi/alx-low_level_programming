@@ -1,17 +1,19 @@
 #include "main.h"
-
 /**
- * _strlen - checks the length of a string
- * @s: string to check
+ * _strchr-locates a chracter in a string
+ * @s: character to be located
+ * @c: input
  *
- * Return: int length of the string
+ * Return:character
  */
-
-int _strlen(char *s)
+char *_strchr(char *s, char c)
 {
-	int length = 0;
+        int x = 0;
 
-	while (s[length])
-		length++;
-	return (length);
+        for (; s[x] >= '\0'; x++)
+        {
+                if (s[x] == c)
+                        return (&s[x]);
+        }
+        return (0);
 }
