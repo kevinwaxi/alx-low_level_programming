@@ -178,6 +178,7 @@ Write a function that returns a pointer to a 2 dimensional array of integers.
    * Each element of the grid should be initialized to 0
    * The function should return NULL on failure
    * If width or height is 0 or negative, return NULL
+```bash
 julien@ubuntu:~/0x0a. malloc, free$ cat 3-main.c
 #include "main.h"
 #include <stdio.h>
