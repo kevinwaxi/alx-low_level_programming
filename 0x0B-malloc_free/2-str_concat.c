@@ -2,33 +2,38 @@
 #include <stdlib.h>
 
 /**
- * _strdup - Returns a pointer to a newly-allocated space in memory
- *           containing a copy of the string given as parameter.
- * @str: The string to be copied.
+ * str_concat - Concatenates two strings.
+ * @s1: The string to be concatenated upon.
+ * @s2: The string to be concatenated to s1.
  *
- * Return: If str == NULL or insufficient memory is available - NULL.
- *         Otherwise - a pointer to the duplicated string.
+ * Return: If concatenation fails - NULL.
+ *         Otherwise - a pointer the newly-allocated space in memory
+ *                     containing the concatenated strings.
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	char *duplicate;
-	int index, len = 0;
+	char *concat_str;
+	int index, concat_index = 0, len = 0;
 
-	if (str == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
 
-	for (index = 0; str[index]; index++)
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index] || s2[index]; index++)
 		len++;
 
-	duplicate = malloc(sizeof(char) * (len + 1));
+	concat_str = malloc(sizeof(char) * len);
 
-	if (duplicate == NULL)
+	if (concat_str == NULL)
 		return (NULL);
 
-	for (index = 0; str[index]; index++)
-		duplicate[index] = str[index];
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s1[index];
 
-	duplicate[len] = '\0';
+	for (index = 0; s2[index]; index++)
+		concat_str[concat_index++] = s2[index];
 
-	return (duplicate);
+	return (concat_str);
 }
